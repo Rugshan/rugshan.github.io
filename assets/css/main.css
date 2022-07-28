@@ -3219,7 +3219,7 @@ input, select, textarea {
 					top: 0;
 					left: 0;
 					text-indent: 0;
-					text-align: right;
+					text-align: left;
 					margin-left: 0;
 					padding-right: 1.25em;
 				}
