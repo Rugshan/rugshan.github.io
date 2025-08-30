@@ -1,0 +1,191 @@
+---
+// Interests section component
+const interests = [
+  {
+    category: "Cars & Automotive",
+    icon: "🚗",
+    description: "Passionate about performance vehicles and maintaining my current car.",
+    items: [
+      { name: "Performance Cars", icon: "🏎️" },
+      { name: "Detailing", icon: "🧼" },
+      { name: "DIY Maintenance", icon: "🔧" },
+      { name: "Auto Shows", icon: "🎪" }
+    ],
+    color: "from-red-500 to-orange-500"
+  },
+  {
+    category: "Gaming",
+    icon: "🎮",
+    description: "Enthusiastic gamer who enjoys both competitive and co-op games across various genres.",
+    items: [
+      { name: "PC Gaming", icon: "🖥️" },
+      { name: "Strategy Games", icon: "💥" },
+      { name: "FPS Games", icon: "🎧" },
+      { name: "Esports", icon: "🏆" }
+    ],
+    color: "from-purple-500 to-pink-500"
+  },
+  {
+    category: "Technology",
+    icon: "💻",
+    description: "Always excited about the latest tech trends, from building computers to exploring cutting-edge technology.",
+    items: [
+      { name: "PC Building", icon: "🔨" },
+      { name: "Custom Keyboards", icon: "⌨️" },
+      { name: "Tech Reviews", icon: "📱" },
+      { name: "Innovation", icon: "🚀" }
+    ],
+    color: "from-blue-500 to-cyan-500"
+  }
+];
+
+const otherInterests = [
+  { name: "Personal Finance & Investing", description: "Managing investments and improving my financial literacy", icon: "💰" },
+  { name: "Fitness", description: "Getting into working out and fitness as part of my health journey", icon: "💪" },
+  { name: "Restaurants & Food", description: "Exploring new cuisines and discovering great dining spots", icon: "🍽️" },
+  { name: "Sports Nights", description: "Watching UFC fights and competitive esports tournaments", icon: "🥊" }
+];
+---
+
+<section id="interests" class="pt-20 bg-gray-50 dark:bg-dark-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Things I Like
+      </h2>
+      <div class="w-24 h-1 bg-primary-600 mx-auto mb-6"></div>
+      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        Beyond coding, here are some of my passions and interests that keep me inspired and motivated.
+      </p>
+    </div>
+
+    <!-- Main Interest Categories -->
+    <div class="grid lg:grid-cols-3 gap-8 mb-16">
+      {interests.map((interest, index) => (
+        <div 
+          class="group relative bg-white dark:bg-dark-700 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+          data-aos="fade-up"
+          data-aos-delay={index * 200}
+        >
+          <!-- Background Gradient -->
+          <div class={`absolute inset-0 bg-gradient-to-br ${interest.color} opacity-5 group-hover:opacity-10 rounded-xl transition-opacity duration-500`}></div>
+          
+          <div class="relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-6">
+              <div class="text-5xl mb-4">{interest.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                {interest.category}
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                {interest.description}
+              </p>
+            </div>
+
+            <!-- Interest Items -->
+            <div class="grid grid-cols-2 gap-3">
+              {interest.items.map((item) => (
+                                 <div class="flex items-center space-x-2 p-2 bg-gray-50 dark:bg-dark-600 rounded-lg group-hover:bg-gray-100 dark:group-hover:bg-dark-500 transition-colors" title={item.name}>
+                   <span class="text-base">{item.icon}</span>
+                   <span class="text-xs font-medium text-gray-700 dark:text-gray-300 truncate">
+                     {item.name}
+                   </span>
+                 </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Tech Interests Detail -->
+    <div class="bg-white dark:bg-dark-700 rounded-2xl p-8 mb-16" data-aos="fade-up">
+      <div class="text-center mb-8">
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          Other Interests
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Beyond my main interests, here are other things I keep busy with, including personal finance, fitness, restaurants, and sports nights.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {otherInterests.map((item, index) => (
+          <div 
+            class="text-center p-6 bg-gray-50 dark:bg-dark-600 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-500 transition-colors duration-300 transform hover:-translate-y-1"
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+          >
+            <div class="text-3xl mb-3">{item.icon}</div>
+            <h4 class="font-semibold text-gray-900 dark:text-white mb-2">
+              {item.name}
+            </h4>
+            <p class="text-sm text-gray-600 dark:text-gray-300">
+              {item.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Hobbies Timeline -->
+    <!-- <div class="bg-gradient-to-r from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800 rounded-2xl p-8" data-aos="fade-up">
+      <div class="text-center mb-8">
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          How I Spend My Time
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Balancing work and play - here's how I like to unwind and stay inspired.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white dark:bg-dark-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <span class="text-2xl">💻</span>
+          </div>
+          <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Coding & Learning</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">
+            Working on projects and learning new technologies
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white dark:bg-dark-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <span class="text-2xl">🎮</span>
+          </div>
+          <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Gaming</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">
+            Playing games and staying updated with the gaming world
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white dark:bg-dark-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <span class="text-2xl">🚗</span>
+          </div>
+          <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Cars</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">
+            Exploring automotive technology and latest innovations
+          </p>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Call to Action -->
+    <!-- <div class="text-center mt-16" data-aos="fade-up">
+      <p class="text-gray-600 dark:text-gray-300 mb-6">
+        Want to chat about cars, gaming, or tech? I'm always up for interesting conversations!
+      </p>
+      <a 
+        href="#contact" 
+        class="inline-flex items-center px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+      >
+        Let's Connect
+        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div> -->
+  </div>
+</section>

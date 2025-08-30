@@ -1,0 +1,124 @@
+---
+// Experience section component
+const experiences = [
+  {
+    title: "Software Developer",
+    company: "Cloud SynApps",
+    period: "Oct. 2022 - Present",
+    description: "Developing and maintaining cloud-based software solutions, working on enterprise applications and system integrations. Collaborating with cross-functional teams to deliver high-quality software products and services.",
+    skills: ["Development", "Architecture", "Salesforce", "LWC", "Apex", "AWS", "SQL", "SOQL", "MySQL", "REST API", "CI/CD", "VisualForce", "JavaScript", "Database Design", "Data Migration", "Git"]
+  },
+  {
+    title: "Software Development Projects",
+    company: "Personal & Academic",
+    period: "Sept. 2018 - Sept. 2022",
+    description: "Developed various software applications including autonomous systems, web applications, and utility tools.",
+    skills: ["Java", "Python", "gRPC", "RabbitMQ", "Tkinter", "Git", "HTML", "CSS", "JavaScript", "C", "MySQL", "SQLite"]
+  }
+];
+
+const education = [
+  {
+    degree: "Bachelor of Engineering",
+    field: "Computer Engineering",
+    school: "Ryerson University",
+    year: "Spet. 2018 - Sept. 2022",
+    description: "Specialized in Software Engineering with comprehensive coursework in programming, algorithms, and system design.<br>• 2022 Ryerson Engineering Day (RED) Computer Engineering Capstone Award<br>• 2x Dean's List"
+  }
+];
+---
+
+<section id="experience" class="py-20 bg-white dark:bg-dark-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Experience & Education
+      </h2>
+      <div class="w-24 h-1 bg-primary-600 mx-auto"></div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12">
+      <!-- Experience -->
+      <div data-aos="fade-right">
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 flex items-center">
+          <svg class="w-6 h-6 text-primary-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path>
+          </svg>
+          Professional Experience
+        </h3>
+
+        <div class="space-y-8">
+          {experiences.map((exp, index) => (
+            <div class="relative pl-8 border-l-2 border-primary-200 dark:border-primary-700">
+              <div class="absolute -left-2.5 top-0 w-5 h-5 bg-primary-600 rounded-full"></div>
+              <div class="space-y-2">
+                <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
+                  {exp.title}
+                </h4>
+                <p class="text-primary-600 dark:text-primary-400 font-medium">
+                  {exp.company}
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  {exp.period}
+                </p>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {exp.description}
+                </p>
+                <div class="flex flex-wrap gap-2 pt-2">
+                  {exp.skills.map((skill) => (
+                    <span class="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 text-sm rounded-full">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div data-aos="fade-left">
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 flex items-center">
+          <svg class="w-6 h-6 text-primary-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838l-2.727 1.17 1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
+          </svg>
+          Education
+        </h3>
+
+        <div class="space-y-8">
+          {education.map((edu, index) => (
+            <div class="relative pl-8 border-l-2 border-primary-200 dark:border-primary-700">
+              <div class="absolute -left-2.5 top-0 w-5 h-5 bg-primary-600 rounded-full"></div>
+              <div class="space-y-2">
+                <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
+                  {edu.degree} - {edu.field}
+                </h4>
+                <p class="text-primary-600 dark:text-primary-400 font-medium">
+                  {edu.school}
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  {edu.year}
+                </p>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed" set:html={edu.description}>
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+    
+    <!-- Call to Action -->
+    <div class="text-center mt-16 pt-8">
+      <a href="#certifications" class="inline-flex items-center px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+        View My Certifications
+        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+    
+</section>

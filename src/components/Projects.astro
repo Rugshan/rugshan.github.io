@@ -1,0 +1,295 @@
+---
+// Projects section component
+const projects = [
+  {
+    title: "Healthcare Job Board Platform",
+    description: "Designed and implemented a comprehensive job board site serving 60,000+ registered healthcare job seekers. Features complex LWCs, Apex, VisualForce components, advanced filtering, Leaflet JS for opportunity visualization, FullCalendar JS for locum opportunities, alert subscriptions, and targeted banners. Configured AWS Lambda, API Gateway, S3, and IAM for secure file storage with pre-signed URLs. Built employer registration and management portal using LWCs, OmniStudio, Apex, and Flows. Performed end-to-end data model design, architecture, and legacy data migration using MySQL Workbench, SQL, Python, Excel, and Dataloader.",
+    image: "/images/HealthCareJobBoard.png",
+    technologies: ["Salesforce", "Apex", "Lightning Web Components", "OmniStudio", "AWS", "Python", "SQL", "JavaScript"],
+    github: null,
+    live: null,
+    featured: true,
+    company: "Cloud SynApps"
+  },
+  {
+    title: "Municipal Government Digital Transformation",
+    description: "Leveraged OmniStudio to bring branded, tailored digital transformation to public regional services across 8 business units. Created Digital Experience portal applications using OmniStudio, OmniScripts, Flexcards, Integration Procedures, and DataRaptors. Spearheaded smooth application releases into shared environments, managing merges, pull requests, and devising effective release strategies for government services.",
+    image: "/images/MunicipalGovernmentDigitalTransformation.png",
+    technologies: ["OmniStudio", "Salesforce", "Git", "Release Management"],
+    github: null,
+    live: null,
+    featured: true,
+    company: "Cloud SynApps"
+  },
+  {
+    title: "Provincial Government API & Integration",
+    description: "Developed RESTful APIs with pagination to streamline manual data extraction processes. Implemented file-attachment report generation using Batch Apex, reducing licensing expenses. Created seamless integration with external legacy case management systems using Postman, LWCs, and Apex. Built mass-email solutions within system limits using various Apex patterns. Implemented SAML Single Sign-On integrations and orchestrated major milestone releases with Git branch management, Azure CI/CD pipelines, and production deployments.",
+    image: "/images/ProvincialGovernmentAPI.png",
+    technologies: ["Salesforce", "Apex", "REST APIs", "OmniStudio", "SAML", "Azure DevOps", "Git"],
+    github: null,
+    live: null,
+    featured: true,
+    company: "Cloud SynApps"
+  },
+  {
+    title: "Provincial Government Digital Experience Portal",
+    description: "Designed and implemented a seamless integration with an external legacy case management system, employing tools such as Postman REST API Client, Lightning Web Components, and Apex. Created a mass-email solution functioning within daily system email limits, leveraging Apex (Synchronous, Asynchronous, Invocable, Batch, Scheduled) and Screen Flows. Integrated a third-party payment processor through REST API to facilitate application payments and refunds. Created an application form for a Digital Experience portal using OmniStudio, OmniScripts, Flexcards, Integration Procedures, DataRaptors, and LWCs. Worked on SAML Single Sign-On integrations, ensuring secure authentication processes for external and internal users. Orchestrated multiple major milestone releases to production, encompassing tasks such as reviewing Git branches, merging branches, resolving merge conflicts, preparing release documentation, updating Azure CICD pipelines, conducting mock deployments, and performing live deployments.",
+    image: "/images/ProvincialGovernmentDigitalExperiencePortal.png",
+    technologies: ["Salesforce", "Apex", "OmniStudio", "SAML", "REST APIs", "Azure DevOps", "Git", "Payment Integration"],
+    github: null,
+    live: null,
+    featured: true,
+    company: "Cloud SynApps"
+  },
+  {
+    title: "Autonomous Fetching Assistant",
+    description: "Capstone project featuring an autonomous robot with voice control capabilities designed for assisted living environments. Implements advanced robotics, computer vision, and natural language processing.",
+    image: "/images/project_capstone_thumbnail.jpeg",
+    technologies: ["Python", "Computer Vision", "Robotics", "Voice Control", "Machine Learning"],
+    github: "https://github.com/Rugshan/Capstone",
+    live: null,
+    featured: false,
+    company: "Academic Project"
+  },
+  {
+    title: "City Waste Collection System",
+    description: "A scalable, multithreaded system for deploying waste collection vehicles with real-time logging and notification capabilities. Built with microservices architecture using gRPC and RabbitMQ.",
+    image: "/images/citywastecollection.jpg",
+    technologies: ["Python", "gRPC", "RabbitMQ", "Microservices", "Multithreading"],
+    github: "https://github.com/Rugshan/CityWasteCollection",
+    live: null,
+    featured: false,
+    company: "Academic Project"
+  },
+  {
+    title: "PDF Extractor Tool",
+    description: "Desktop application for extracting and saving text and images from PDF files. Features a user-friendly GUI built with Tkinter and comprehensive PDF processing capabilities.",
+    image: "/images/project_pdf_extractor_thumbnail.png",
+    technologies: ["Python", "Tkinter", "PyPDF2", "Pillow", "GUI Development"],
+    github: "https://github.com/Rugshan/PDF-Extractor",
+    live: null,
+    featured: false,
+    company: "Personal Project"
+  },
+  {
+    title: "Pomodoro Timer",
+    description: "Productivity application implementing the Pomodoro Technique for effective time management. Features customizable work/break intervals and a clean, intuitive interface.",
+    image: "/images/project_pomodoro_timer_thumbnail.png",
+    technologies: ["Python", "Tkinter", "Time Management", "GUI Development"],
+    github: "https://github.com/Rugshan/Pomodoro-Timer",
+    live: null,
+    featured: false,
+    company: "Personal Project"
+  },
+  {
+    title: "Bank Application",
+    description: "Object-oriented bank account management system with GUI interface. Demonstrates software design patterns, UML modeling, and comprehensive testing with JUnit and TestNG.",
+    image: "/images/pic04.jpg",
+    technologies: ["Java", "JavaFX", "JUnit", "TestNG", "UML", "OOP"],
+    github: "https://github.com/Rugshan/BankApp",
+    live: null,
+    featured: false,
+    company: "Academic Project"
+  },
+  {
+    title: "Modern Portfolio Website",
+    description: "This very website! Built with Astro and Tailwind CSS, featuring responsive design, dark mode, smooth animations, and modern web development best practices.",
+    image: "/images/intro_programming_image.png",
+    technologies: ["Astro", "Tailwind CSS", "JavaScript", "Responsive Design", "SEO"],
+    github: "https://github.com/Rugshan/rugshan.github.io",
+    live: "https://rugshan.github.io",
+    featured: false,
+    company: "Personal Project"
+  }
+];
+---
+
+<section id="projects" class="py-20 bg-gray-50 dark:bg-dark-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Featured Projects
+      </h2>
+      <div class="w-24 h-1 bg-primary-600 mx-auto mb-6"></div>
+      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        Here are some of the projects I've worked on, showcasing my skills in software development, 
+        problem-solving, and creating user-friendly applications.
+      </p>
+    </div>
+
+    <!-- Featured Projects -->
+    <div class="grid lg:grid-cols-2 gap-8 mb-16">
+      {projects.filter(p => p.featured).map((project, index) => (
+        <div 
+          class="group relative bg-white dark:bg-dark-700 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2"
+          data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+          data-aos-delay={index * 100}
+        >
+          <div class="relative overflow-hidden">
+            <img 
+              src={project.image} 
+              alt={project.title}
+              class="w-full h-100 object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+              {project.title}
+            </h3>
+            {project.company && (
+              <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">at {project.company}</p>
+            )}
+            <div class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+              {project.description.split('. ').map((sentence, i) => (
+                <p class="mb-2">{sentence}{i < project.description.split('. ').length - 1 ? '.' : ''}</p>
+              ))}
+            </div>
+            
+            <div class="flex flex-wrap gap-2 mb-6">
+              {project.technologies.map((tech) => (
+                <span class="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 text-sm rounded-full">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            
+            <div class="flex space-x-4">
+              {project.github && (
+                <a 
+                  href={project.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
+                >
+                  <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                  View Code
+                </a>
+              )}
+              {project.live && (
+                <a 
+                  href={project.live} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center px-4 py-2 border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white rounded-lg transition-colors"
+                >
+                  <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                  Live Demo
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Other Projects -->
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+        Other Projects
+      </h3>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {projects.filter(p => !p.featured).map((project, index) => (
+        <div 
+          class="group bg-white dark:bg-dark-700 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1"
+          data-aos="fade-up"
+          data-aos-delay={index * 100}
+        >
+          <div class="relative overflow-hidden">
+            <img 
+              src={project.image} 
+              alt={project.title}
+              class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          
+          <div class="p-5">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+              {project.title}
+            </h4>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-3">
+              {project.description}
+            </p>
+            
+            <div class="flex flex-wrap gap-1 mb-4">
+              {project.technologies.slice(0, 3).map((tech) => (
+                <span class="px-2 py-1 bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-300 text-xs rounded">
+                  {tech}
+                </span>
+              ))}
+              {project.technologies.length > 3 && (
+                <span class="px-2 py-1 bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-300 text-xs rounded">
+                  +{project.technologies.length - 3} more
+                </span>
+              )}
+            </div>
+            
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-3">
+                {project.github && (
+                  <a 
+                    href={project.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 text-sm font-medium transition-colors"
+                  >
+                    View Code →
+                  </a>
+                )}
+                {project.live && (
+                  <a 
+                    href={project.live} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 text-sm font-medium transition-colors"
+                  >
+                    Live Demo →
+                  </a>
+                )}
+              </div>
+              {project.company && (
+                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-xs rounded-full font-medium">
+                  {project.company}
+                </span>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center mt-16" data-aos="fade-up">
+      <p class="text-gray-600 dark:text-gray-300 mb-6">
+        Interested in seeing more of my work or collaborating on a project?
+      </p>
+      <a 
+        href="https://github.com/Rugshan" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="inline-flex items-center px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+      >
+        View All Projects on GitHub
+        <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

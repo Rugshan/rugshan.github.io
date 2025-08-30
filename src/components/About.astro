@@ -1,0 +1,118 @@
+---
+// About section component
+---
+
+<section id="about" class="py-20 bg-gray-50 dark:bg-dark-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        About Me
+      </h2>
+      <div class="w-24 h-1 bg-primary-600 mx-auto"></div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- About Content -->
+      <div class="space-y-6" data-aos="fade-right">
+        <div class="prose prose-lg dark:prose-invert max-w-none">
+          <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            I'm a recent Computer Engineering graduate from Ryerson University who specialized in Software Engineering. 
+            My passion lies in creating innovative software solutions and continuously expanding my technical skills.
+          </p>
+          
+          <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            I have a strong foundation in both theoretical concepts and practical implementation, with experience in 
+            various programming languages, frameworks, and development methodologies. I'm always eager to learn new 
+            technologies and take on challenging projects.
+          </p>
+
+          <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            When I'm not coding, you can find me exploring the latest tech trends, working on personal projects, 
+            or diving into online courses to enhance my skills. I believe in the power of continuous learning 
+            and staying up-to-date with industry best practices.
+          </p>
+        </div>
+
+        <!-- Key Points -->
+        <div class="grid sm:grid-cols-2 gap-4 pt-6">
+          <div class="flex items-center space-x-3">
+            <div class="flex-shrink-0 w-8 h-8 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center">
+              <svg class="w-4 h-4 text-primary-600 dark:text-primary-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <span class="text-gray-700 dark:text-gray-300 font-medium">Computer Engineering Graduate</span>
+          </div>
+          
+          <div class="flex items-center space-x-3">
+            <div class="flex-shrink-0 w-8 h-8 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center">
+              <svg class="w-4 h-4 text-primary-600 dark:text-primary-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <span class="text-gray-700 dark:text-gray-300 font-medium">Software Engineering Focus</span>
+          </div>
+          
+          <div class="flex items-center space-x-3">
+            <div class="flex-shrink-0 w-8 h-8 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center">
+              <svg class="w-4 h-4 text-primary-600 dark:text-primary-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <span class="text-gray-700 dark:text-gray-300 font-medium">Passionate Developer</span>
+          </div>
+          
+          <div class="flex items-center space-x-3">
+            <div class="flex-shrink-0 w-8 h-8 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center">
+              <svg class="w-4 h-4 text-primary-600 dark:text-primary-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <span class="text-gray-700 dark:text-gray-300 font-medium">Continuous Learner</span>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="pt-6">
+          <a 
+            href="#contact" 
+            class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            Let's Work Together
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- About Image -->
+      <div class="relative" data-aos="fade-left">
+        <div class="relative z-10">
+          <img 
+            src="/images/intro_programming_image.png" 
+            alt="Programming and Development" 
+            class="w-full h-auto rounded-lg shadow-2xl"
+          />
+        </div>
+        
+        <!-- Background Elements -->
+        <div class="absolute -top-4 -right-4 w-72 h-72 bg-primary-200 dark:bg-primary-800 rounded-full opacity-20 blur-3xl"></div>
+        <div class="absolute -bottom-4 -left-4 w-48 h-48 bg-primary-300 dark:bg-primary-700 rounded-full opacity-20 blur-2xl"></div>
+        
+        <!-- Floating Icons -->
+        <div class="absolute top-4 right-4 w-12 h-12 bg-white dark:bg-dark-700 rounded-lg shadow-lg flex items-center justify-center">
+          <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+        
+        <div class="absolute bottom-4 left-4 w-12 h-12 bg-white dark:bg-dark-700 rounded-lg shadow-lg flex items-center justify-center">
+          <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
