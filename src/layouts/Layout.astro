@@ -21,6 +21,27 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <!-- SEO -->
     <title>{title}</title>
     <link rel="canonical" href={canonicalURL} />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="author" content="Rugshan Gnanandram" />
+    <meta name="keywords" content="software developer, software engineer, computer engineering, web development, programming, portfolio" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rugshan Gnanandram",
+        "jobTitle": "Software Developer",
+        "url": "https://rugshan.dev",
+        "sameAs": [
+          "https://github.com/rugshan",
+          "https://linkedin.com/in/rugshan-gnanandram"
+        ],
+        "image": "https://rugshan.dev/images/profile_pic.jpeg",
+        "description": "Software Engineer & Computer Engineering Graduate"
+      }
+    </script>
     
     <!-- Open Graph -->
     <meta property="og:type" content="website" />

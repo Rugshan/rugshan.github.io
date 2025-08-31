@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap locations
+Sitemap: https://rugshan.dev/sitemap.xml
+Sitemap: https://rugshan.dev/sitemap-index.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
